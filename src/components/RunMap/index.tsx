@@ -13,7 +13,6 @@ import maplibregl from "maplibre-gl";
 import {
   IS_CHINESE,
   ROAD_LABEL_DISPLAY,
-  // MAPBOX_TOKEN,
   PROVINCE_FILL_COLOR,
   COUNTRY_FILL_COLOR,
   USE_DASH_LINE,
