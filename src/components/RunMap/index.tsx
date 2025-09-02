@@ -9,7 +9,7 @@ import Map, {
 } from 'react-map-gl';
 import { MapInstance } from 'react-map-gl/src/types/lib';
 import useActivities from '@/hooks/useActivities';
-import maplibregl from "maplibre-gl";
+import maplibregl from 'maplibre-gl';
 import {
   IS_CHINESE,
   ROAD_LABEL_DISPLAY,
