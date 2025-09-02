@@ -9,10 +9,11 @@ import Map, {
 } from 'react-map-gl';
 import { MapInstance } from 'react-map-gl/src/types/lib';
 import useActivities from '@/hooks/useActivities';
+import maplibregl from "maplibre-gl";
 import {
   IS_CHINESE,
   ROAD_LABEL_DISPLAY,
-  MAPBOX_TOKEN,
+  // MAPBOX_TOKEN,
   PROVINCE_FILL_COLOR,
   COUNTRY_FILL_COLOR,
   USE_DASH_LINE,
@@ -249,13 +250,14 @@ const RunMap = ({
   return (
     <Map
       {...viewState}
+      mapLib={maplibregl}
       onMove={onMove}
       onClick={handleMapClick}
       style={style}
       mapStyle={mapStyle}
       ref={mapRefCallback}
       cooperativeGestures={isTouchDevice()}
-      mapboxAccessToken={MAPBOX_TOKEN}
+      // mapboxAccessToken={MAPBOX_TOKEN}
     >
       <RunMapButtons changeYear={changeYear} thisYear={thisYear} />
       <Source id="data" type="geojson" data={combinedGeoData}>
