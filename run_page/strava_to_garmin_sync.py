@@ -105,5 +105,5 @@ if __name__ == "__main__":
         options.strava_client_id,
         options.strava_client_secret,
         options.strava_refresh_token,
-        True,
+        only_run=False,
     )
