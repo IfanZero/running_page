@@ -17,7 +17,7 @@ async def upload_to_activities(
         filters = {}
     else:
         # is this startTimeGMT must have ?
-        after_datetime_str = last_activity[0]["startTimeGMT"]
+        after_datetime_str = last_activity[0]["startTimeLocal"]
         after_datetime = datetime.strptime(after_datetime_str, "%Y-%m-%d %H:%M:%S")
         print("garmin last activity date: ", after_datetime)
         filters = {"after": after_datetime}
@@ -105,5 +105,5 @@ if __name__ == "__main__":
         options.strava_client_id,
         options.strava_client_secret,
         options.strava_refresh_token,
-        only_run=False,
+        only_run=True,
     )

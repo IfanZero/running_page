@@ -138,7 +138,6 @@ class Garmin:
             f = open(data.filename, "rb")
             file_body = process_garmin_data(f, use_fake_garmin_device)
             files = {"file": (data.filename, file_body)}
-            print(files)
             try:
                 res = await self.req.post(
                     self.upload_url, files=files, headers=self.headers
